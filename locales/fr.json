@@ -1,0 +1,6 @@
+{
+    "welcome": "Bienvenue",
+    "search_placeholder": "Entrez une ville",
+    "search_button": "Chercher",
+    "error_message": "Erreur lors de la récupération des données"
+  }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import HomeScreen from '../screens/HomeScreen';
-import { useGetWeatherByCityQuery } from '../redux/services/weatherApi';
+import { useGetWeatherByCityQuery } from '../services/weatherApi';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const mockedUseGetWeatherByCityQuery = useGetWeatherByCityQuery as jest.Mock;

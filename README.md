@@ -1,5 +1,28 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+Architecture Overview
+This application is built using React for the user interface and Redux Toolkit (RTK) for state management. The weather details are fetched using RTK Query, which is integrated into the Redux store to manage API calls, caching, and state efficiently.
+
+1. Data Fetching with RTK Query
+RTK Query simplifies data fetching by handling API requests, caching, and state management automatically. We define the API endpoints using createApi from RTK Query, allowing the app to easily fetch weather data and store it in the Redux state.
+
+2. Redux Store Configuration
+The Redux store is configured to include the RTK Query service. By adding the weatherApi.reducer to the store and integrating the weatherApi.middleware, we ensure that the data fetched through RTK Query is managed and cached efficiently.
+
+3. Component Integration
+Components use RTK Query hooks to fetch data and display it to the user. The useGetWeatherQuery hook fetches the weather data based on the user’s city and updates the component state. It also provides status indicators like isLoading and error for handling loading states and errors.
+
+4. Benefits of RTK Query Integration
+Simplified API Management: RTK Query automatically handles requests, responses, and caching, reducing boilerplate code.
+
+Efficient Data Fetching: Fetches weather data as needed, with built-in caching to minimize repeated API calls.
+
+Automatic Re-fetching: Keeps the data fresh and re-fetches when necessary without additional logic.
+
+State Management: Manages the fetched data in Redux, allowing the application to respond to state changes efficiently.
+
+Error Handling: Built-in error handling with error and isLoading states.
+
 # Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.

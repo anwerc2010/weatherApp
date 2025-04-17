@@ -2,5 +2,7 @@
     "weatherFinder": "Weather Finder",
     "search_placeholder": "Enter city",
     "search_button": "Search",
-    "error_message": "Error fetching data"
+    "error_message": "Error fetching data",
+    "no_internet_error": "No internet connection"
+
   }
